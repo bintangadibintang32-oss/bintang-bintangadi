@@ -1,42 +1,69 @@
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Dolar Berjatuhan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Biodata Bintang Adi Heriyanto</title>
 
     <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
+
+
+        /* =========================
+           BODY
+        ========================= */
 
         body {
-            height: 100vh;
-            overflow: hidden;
-            background: linear-gradient(135deg, #001f0d, #075b2b, #001a09);
+            min-height: 100vh;
+            background:
+                radial-gradient(circle at top, #0b6b35, #021b0d 70%);
+            color: white;
+            overflow-x: hidden;
         }
 
-        /* Dolar */
-        .dollar {
-            position: fixed;
-            top: -80px;
-            color: #00ff66;
-            font-size: 45px;
-            font-weight: bold;
-            text-shadow:
-                0 0 5px #00ff66,
-                0 0 15px #00ff66,
-                0 0 25px #00ff66;
 
-            animation-name: jatuh;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
+        /* =========================
+           HUJAN DOLAR
+        ========================= */
+
+        .money {
+            position: fixed;
+            top: -100px;
+            color: #ffd700;
+            font-size: 40px;
+            font-weight: bold;
+
+            text-shadow:
+                0 0 5px #ffd700,
+                0 0 15px #ffd700,
+                0 0 30px #00ff66;
+
+            z-index: 1;
+            pointer-events: none;
+
+            animation: jatuh linear infinite;
         }
 
         @keyframes jatuh {
+
             0% {
-                transform: translateY(-100px) rotate(0deg);
+                transform:
+                    translateY(-100px)
+                    translateX(0)
+                    rotate(0deg);
+
                 opacity: 0;
             }
 
@@ -45,135 +72,961 @@
             }
 
             50% {
-                transform: translateY(50vh) rotate(180deg);
+                transform:
+                    translateY(50vh)
+                    translateX(80px)
+                    rotate(180deg);
             }
 
             100% {
-                transform: translateY(110vh) rotate(360deg);
+                transform:
+                    translateY(115vh)
+                    translateX(-80px)
+                    rotate(360deg);
+
                 opacity: 0;
             }
         }
 
-        /* Posisi dan kecepatan dolar */
-        .dollar:nth-child(1) {
-            left: 3%;
+
+        /* Posisi dolar */
+
+        .money:nth-child(1) {
+            left: 2%;
             animation-duration: 5s;
         }
 
-        .dollar:nth-child(2) {
-            left: 10%;
+        .money:nth-child(2) {
+            left: 8%;
             animation-duration: 7s;
             animation-delay: 2s;
             font-size: 30px;
         }
 
-        .dollar:nth-child(3) {
-            left: 18%;
+        .money:nth-child(3) {
+            left: 15%;
             animation-duration: 6s;
             animation-delay: 1s;
         }
 
-        .dollar:nth-child(4) {
-            left: 27%;
-            animation-duration: 8s;
-            animation-delay: 3s;
-            font-size: 55px;
-        }
-
-        .dollar:nth-child(5) {
-            left: 35%;
-            animation-duration: 5s;
-            animation-delay: 1s;
-        }
-
-        .dollar:nth-child(6) {
-            left: 44%;
-            animation-duration: 7s;
-            animation-delay: 4s;
-            font-size: 35px;
-        }
-
-        .dollar:nth-child(7) {
-            left: 53%;
-            animation-duration: 6s;
-            animation-delay: 2s;
-        }
-
-        .dollar:nth-child(8) {
-            left: 62%;
-            animation-duration: 8s;
-            animation-delay: 1s;
-            font-size: 55px;
-        }
-
-        .dollar:nth-child(9) {
-            left: 71%;
-            animation-duration: 5s;
-            animation-delay: 3s;
-        }
-
-        .dollar:nth-child(10) {
-            left: 80%;
-            animation-duration: 7s;
-            animation-delay: 1s;
-            font-size: 35px;
-        }
-
-        .dollar:nth-child(11) {
-            left: 88%;
-            animation-duration: 6s;
-            animation-delay: 4s;
-        }
-
-        .dollar:nth-child(12) {
-            left: 96%;
+        .money:nth-child(4) {
+            left: 23%;
             animation-duration: 9s;
+            animation-delay: 3s;
+            font-size: 55px;
+        }
+
+        .money:nth-child(5) {
+            left: 31%;
+            animation-duration: 5s;
+            animation-delay: 1s;
+        }
+
+        .money:nth-child(6) {
+            left: 40%;
+            animation-duration: 8s;
+            animation-delay: 4s;
+            font-size: 32px;
+        }
+
+        .money:nth-child(7) {
+            left: 48%;
+            animation-duration: 6s;
+            animation-delay: 2s;
+        }
+
+        .money:nth-child(8) {
+            left: 57%;
+            animation-duration: 9s;
+            animation-delay: 1s;
+            font-size: 55px;
+        }
+
+        .money:nth-child(9) {
+            left: 65%;
+            animation-duration: 5s;
+            animation-delay: 3s;
+        }
+
+        .money:nth-child(10) {
+            left: 73%;
+            animation-duration: 7s;
+            animation-delay: 1s;
+            font-size: 35px;
+        }
+
+        .money:nth-child(11) {
+            left: 82%;
+            animation-duration: 6s;
+            animation-delay: 4s;
+        }
+
+        .money:nth-child(12) {
+            left: 90%;
+            animation-duration: 8s;
             animation-delay: 2s;
             font-size: 55px;
         }
 
-        /* Konten */
-        .content {
+        .money:nth-child(13) {
+            left: 97%;
+            animation-duration: 5s;
+            animation-delay: 3s;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
             position: relative;
-            z-index: 10;
-            color: white;
+            z-index: 5;
+
             text-align: center;
-            padding-top: 200px;
+            padding: 45px 20px;
+
+            background: rgba(0, 20, 8, 0.85);
+
+            border-bottom:
+                2px solid #ffd700;
+
+            box-shadow:
+                0 0 30px rgba(255, 215, 0, 0.3);
+
+            animation: turun 1s ease;
         }
 
-        h1 {
-            font-size: 50px;
+        @keyframes turun {
+
+            from {
+                opacity: 0;
+                transform: translateY(-60px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        header .logo {
+            font-size: 70px;
             color: #ffd700;
-            text-shadow: 0 0 20px #ffd700;
+
+            animation: glow 2s infinite alternate;
         }
 
-        p {
-            margin-top: 15px;
-            font-size: 20px;
+        @keyframes glow {
+
+            from {
+                text-shadow:
+                    0 0 5px #ffd700;
+            }
+
+            to {
+                text-shadow:
+                    0 0 10px #ffd700,
+                    0 0 25px #ffd700,
+                    0 0 50px #00ff66;
+            }
+
         }
+
+        header h1 {
+            margin-top: 10px;
+
+            font-size: 42px;
+
+            color: #ffd700;
+
+            text-shadow:
+                0 0 10px #ffd700;
+        }
+
+        header p {
+            margin-top: 10px;
+            color: #ccc;
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           CONTAINER
+        ========================= */
+
+        .container {
+            position: relative;
+            z-index: 5;
+
+            max-width: 900px;
+
+            margin: 60px auto;
+
+            padding: 20px;
+        }
+
+
+        /* =========================
+           CARD
+        ========================= */
+
+        .card {
+
+            background:
+                rgba(0, 30, 12, 0.92);
+
+            border:
+                2px solid #ffd700;
+
+            border-radius: 25px;
+
+            padding: 40px;
+
+            box-shadow:
+                0 0 30px rgba(255, 215, 0, 0.2),
+                0 25px 60px rgba(0, 0, 0, 0.6);
+
+            animation:
+                muncul 1.5s ease;
+
+            transition: 0.5s;
+        }
+
+        .card:hover {
+
+            transform:
+                translateY(-8px);
+
+            box-shadow:
+                0 0 45px rgba(255, 215, 0, 0.4),
+                0 30px 70px rgba(0, 0, 0, 0.7);
+        }
+
+        @keyframes muncul {
+
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+        }
+
+
+        /* =========================
+           PROFIL
+        ========================= */
+
+        .profile {
+            text-align: center;
+
+            margin-bottom: 40px;
+        }
+
+        .profile-photo {
+
+            width: 170px;
+            height: 170px;
+
+            margin: auto;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 80px;
+
+            color: #ffd700;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #064d24,
+                    #0b8f45
+                );
+
+            border:
+                5px solid #ffd700;
+
+            box-shadow:
+                0 0 20px #ffd700;
+
+            animation:
+                mengambang 3s ease-in-out infinite,
+                glow 2s infinite alternate;
+        }
+
+        @keyframes mengambang {
+
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+        }
+
+        .profile h2 {
+
+            margin-top: 25px;
+
+            color: #ffd700;
+
+            font-size: 32px;
+
+            animation:
+                teks 1.5s ease;
+        }
+
+        @keyframes teks {
+
+            from {
+                opacity: 0;
+                letter-spacing: 15px;
+            }
+
+            to {
+                opacity: 1;
+                letter-spacing: normal;
+            }
+
+        }
+
+        .profile p {
+
+            margin-top: 10px;
+
+            color: #bbb;
+
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           DATA BIODATA
+        ========================= */
+
+        .data {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 18px;
+        }
+
+        .box {
+
+            padding: 20px;
+
+            border-radius: 15px;
+
+            background:
+                rgba(255,255,255,0.06);
+
+            border-left:
+                4px solid #ffd700;
+
+            transition:
+                0.4s;
+
+            animation:
+                boxMasuk 0.8s forwards;
+
+            opacity: 0;
+        }
+
+        .box:nth-child(1) {
+            animation-delay: .2s;
+        }
+
+        .box:nth-child(2) {
+            animation-delay: .4s;
+        }
+
+        .box:nth-child(3) {
+            animation-delay: .6s;
+        }
+
+        .box:nth-child(4) {
+            animation-delay: .8s;
+        }
+
+        .box:nth-child(5) {
+            animation-delay: 1s;
+        }
+
+        .box:nth-child(6) {
+            animation-delay: 1.2s;
+        }
+
+        @keyframes boxMasuk {
+
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+        }
+
+        .box:hover {
+
+            transform:
+                translateY(-8px)
+                scale(1.03);
+
+            background:
+                rgba(255,215,0,0.12);
+
+            box-shadow:
+                0 0 20px
+                rgba(255,215,0,0.25);
+        }
+
+        .box h3 {
+
+            color: #ffd700;
+
+            margin-bottom: 8px;
+
+            font-size: 17px;
+        }
+
+        .box p {
+
+            color: white;
+
+            font-size: 16px;
+        }
+
+
+        /* =========================
+           TENTANG SAYA
+        ========================= */
+
+        .about {
+
+            margin-top: 35px;
+
+            padding: 25px;
+
+            border-radius: 15px;
+
+            background:
+                rgba(255,255,255,0.06);
+
+            animation:
+                naik 1.5s ease;
+        }
+
+        .about h2 {
+
+            color: #ffd700;
+
+            margin-bottom: 15px;
+        }
+
+        .about p {
+
+            color: #ddd;
+
+            line-height: 1.8;
+        }
+
+        @keyframes naik {
+
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+        /* =========================
+           SKILL
+        ========================= */
+
+        .skills {
+
+            margin-top: 35px;
+        }
+
+        .skills h2 {
+
+            color: #ffd700;
+
+            margin-bottom: 20px;
+        }
+
+        .skill {
+
+            margin-bottom: 20px;
+        }
+
+        .skill-name {
+
+            margin-bottom: 8px;
+        }
+
+        .bar {
+
+            width: 100%;
+
+            height: 13px;
+
+            background:
+                #222;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+        }
+
+        .fill {
+
+            height: 100%;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #b8860b,
+                    #ffd700,
+                    #00ff66
+                );
+
+            border-radius: 20px;
+
+            animation:
+                loading 2s ease;
+        }
+
+        @keyframes loading {
+
+            from {
+                width: 0;
+            }
+
+        }
+
+
+        /* =========================
+           TOMBOL
+        ========================= */
+
+        .button-area {
+
+            text-align: center;
+
+            margin-top: 35px;
+        }
+
+        .button {
+
+            display: inline-block;
+
+            padding:
+                14px 30px;
+
+            border-radius: 30px;
+
+            background:
+                linear-gradient(
+                    45deg,
+                    #b8860b,
+                    #ffd700
+                );
+
+            color: #06220f;
+
+            font-weight: bold;
+
+            text-decoration: none;
+
+            transition: 0.4s;
+
+            box-shadow:
+                0 0 15px
+                rgba(255,215,0,0.4);
+        }
+
+        .button:hover {
+
+            transform:
+                scale(1.1);
+
+            box-shadow:
+                0 0 30px
+                #ffd700;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            position: relative;
+            z-index: 5;
+
+            text-align: center;
+
+            padding: 30px;
+
+            background:
+                rgba(0,20,8,0.9);
+
+            border-top:
+                1px solid #ffd700;
+
+            color: #aaa;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 30px;
+            }
+
+            .data {
+                grid-template-columns:
+                    1fr;
+            }
+
+            .card {
+                padding: 22px;
+            }
+
+            .profile-photo {
+                width: 140px;
+                height: 140px;
+                font-size: 65px;
+            }
+
+        }
+
     </style>
 </head>
 
+
 <body>
 
-    <!-- Dolar jatuh -->
-    <div class="dollar">$</div>
-    <div class="dollar">$</div>
-    <div class="dollar">$</div>
-    <div class="dollar">$</div>
-    <div class="dollar">$</div>
-    <div class="dollar">$</div>
-    <div class="dollar">$</div>
-    <div class="dollar">$</div>
-    <div class="dollar">$</div>
-    <div class="dollar">$</div>
-    <div class="dollar">$</div>
-    <div class="dollar">$</div>
 
-    <div class="content">
-        <h1>BINTANG ADI HERIYANTO</h1>
-        <p>BIODATA DIRI</p>
+    <!-- =========================
+         DOLAR BERJATUHAN
+    ========================= -->
+
+    <div class="money">$</div>
+    <div class="money">$</div>
+    <div class="money">$</div>
+    <div class="money">$</div>
+    <div class="money">$</div>
+    <div class="money">$</div>
+    <div class="money">$</div>
+    <div class="money">$</div>
+    <div class="money">$</div>
+    <div class="money">$</div>
+    <div class="money">$</div>
+    <div class="money">$</div>
+    <div class="money">$</div>
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header>
+
+        <div class="logo">$</div>
+
+        <h1>
+            BIODATA DIRI
+        </h1>
+
+        <p>
+            Welcome to My Personal Website
+        </p>
+
+    </header>
+
+
+    <!-- =========================
+         CONTENT
+    ========================= -->
+
+    <div class="container">
+
+        <div class="card">
+
+
+            <!-- PROFIL -->
+
+            <div class="profile">
+
+                <div class="profile-photo">
+                    $
+                </div>
+
+                <h2>
+                    Bintang Adi Heriyanto
+                </h2>
+
+                <p>
+                    Pelajar | Teknik Komputer dan Jaringan
+                </p>
+
+            </div>
+
+
+            <!-- DATA DIRI -->
+
+            <div class="data">
+
+                <div class="box">
+
+                    <h3>
+                        👤 Nama Lengkap
+                    </h3>
+
+                    <p>
+                        Bintang Adi Heriyanto
+                    </p>
+
+                </div>
+
+
+                <div class="box">
+
+                    <h3>
+                        🎓 Kelas
+                    </h3>
+
+                    <p>
+                        XI TKJ 4
+                    </p>
+
+                </div>
+
+
+                <div class="box">
+
+                    <h3>
+                        💻 Jurusan
+                    </h3>
+
+                    <p>
+                        Teknik Komputer dan Jaringan
+                    </p>
+
+                </div>
+
+
+                <div class="box">
+
+                    <h3>
+                        📚 Status
+                    </h3>
+
+                    <p>
+                        Pelajar
+                    </p>
+
+                </div>
+
+
+                <div class="box">
+
+                    <h3>
+                        🌎 Tempat Tinggal
+                    </h3>
+
+                    <p>
+                        Jakarta
+                    </p>
+
+                </div>
+
+
+                <div class="box">
+
+                    <h3>
+                        💰 Tema Website
+                    </h3>
+
+                    <p>
+                        Dollar
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- TENTANG SAYA -->
+
+            <div class="about">
+
+                <h2>
+                    ✨ Tentang Saya
+                </h2>
+
+                <p>
+                    Halo, nama saya Bintang Adi Heriyanto.
+                    Saya adalah seorang pelajar kelas XI TKJ 4
+                    yang mempelajari berbagai hal tentang komputer
+                    dan jaringan. Saya tertarik dengan teknologi,
+                    komputer, networking, dan pengembangan website.
+                </p>
+
+            </div>
+
+
+            <!-- KEAHLIAN -->
+
+            <div class="skills">
+
+                <h2>
+                    💻 Keahlian
+                </h2>
+
+
+                <div class="skill">
+
+                    <div class="skill-name">
+                        HTML
+                    </div>
+
+                    <div class="bar">
+
+                        <div
+                            class="fill"
+                            style="width: 85%;">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-name">
+                        CSS
+                    </div>
+
+                    <div class="bar">
+
+                        <div
+                            class="fill"
+                            style="width: 75%;">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-name">
+                        Networking
+                    </div>
+
+                    <div class="bar">
+
+                        <div
+                            class="fill"
+                            style="width: 80%;">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-name">
+                        MikroTik
+                    </div>
+
+                    <div class="bar">
+
+                        <div
+                            class="fill"
+                            style="width: 70%;">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TOMBOL -->
+
+            <div class="button-area">
+
+                <a
+                    href="#"
+                    class="button">
+
+                    💰 MY PROFILE
+
+                </a>
+
+            </div>
+
+
+        </div>
+
     </div>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        © 2026 Bintang Adi Heriyanto
+        <br>
+
+        XI TKJ 4 | Teknik Komputer dan Jaringan
+
+    </footer>
+
 
 </body>
 </html>
+```
