@@ -1,51 +1,305 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>Biodata Bintang Adi Heriyanto</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata - Bintang Adi Heriyanto</title>
 
     <style>
-        body {
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             font-family: Arial, sans-serif;
-            background-color: #0b5d1e;
-            background-image: 
-                radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 2px);
-            background-size: 30px 30px;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #064d24;
             color: white;
+            overflow-x: hidden;
+        }
+
+        /* Background Dollar */
+        body::before {
+            content: "$   $   $   $   $   $   $   $   $   $";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-size: 80px;
+            line-height: 150px;
+            word-spacing: 50px;
+            color: rgba(255, 255, 255, 0.08);
+            z-index: -1;
+            transform: rotate(-10deg);
+        }
+
+        header {
+            background: rgba(0, 40, 15, 0.9);
+            padding: 25px;
+            text-align: center;
+            border-bottom: 3px solid #d4af37;
+        }
+
+        header h1 {
+            color: #ffd700;
+            font-size: 35px;
+        }
+
+        header p {
+            margin-top: 8px;
+            color: #ddd;
         }
 
         .container {
-            width: 400px;
-            margin: 100px auto;
-            padding: 30px;
-            text-align: center;
-            background: rgba(0, 50, 10, 0.85);
-            border-radius: 20px;
-            box-shadow: 0 0 20px black;
+            max-width: 850px;
+            margin: 50px auto;
+            padding: 20px;
         }
 
-        h1 {
+        .card {
+            background: rgba(0, 30, 10, 0.92);
+            border: 2px solid #d4af37;
+            border-radius: 25px;
+            padding: 35px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+        }
+
+        .profile {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            margin: auto;
+            border-radius: 50%;
+            background: #0b6b35;
+            border: 5px solid #ffd700;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 70px;
             color: #ffd700;
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
+        }
+
+        .profile h2 {
+            margin-top: 20px;
+            color: #ffd700;
+            font-size: 28px;
+        }
+
+        .profile p {
+            color: #ccc;
+            margin-top: 8px;
+        }
+
+        .data {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .box {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 18px;
+            border-radius: 12px;
+            border-left: 4px solid #ffd700;
+        }
+
+        .box h3 {
+            color: #ffd700;
+            margin-bottom: 7px;
+            font-size: 16px;
+        }
+
+        .box p {
+            color: white;
+        }
+
+        .about {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 15px;
+        }
+
+        .about h2 {
+            color: #ffd700;
+            margin-bottom: 12px;
+        }
+
+        .about p {
+            line-height: 1.7;
+            color: #ddd;
+        }
+
+        .skills {
+            margin-top: 30px;
+        }
+
+        .skills h2 {
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+
+        .skill {
+            margin-bottom: 15px;
+        }
+
+        .skill-name {
+            margin-bottom: 5px;
+        }
+
+        .bar {
+            height: 10px;
+            background: #333;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .fill {
+            height: 100%;
+            background: #ffd700;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+            background: rgba(0, 30, 10, 0.9);
+            color: #aaa;
         }
 
         .dollar {
-            font-size: 70px;
+            font-size: 45px;
             color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .data {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                margin: 25px auto;
+            }
+
+            .card {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
+    <header>
         <div class="dollar">$</div>
-
         <h1>BIODATA DIRI</h1>
+        <p>Personal Profile</p>
+    </header>
 
-        <p><b>Nama:</b> Bintang Adi Heriyanto</p>
-        <p><b>Kelas:</b> XI TKJ 4</p>
-        <p><b>Jurusan:</b> Teknik Komputer dan Jaringan</p>
+    <div class="container">
+
+        <div class="card">
+
+            <!-- Profil -->
+            <div class="profile">
+                <div class="profile-photo">
+                    $
+                </div>
+
+                <h2>Bintang Adi Heriyanto</h2>
+                <p>Pelajar | Teknik Komputer dan Jaringan</p>
+            </div>
+
+            <!-- Data Diri -->
+            <div class="data">
+
+                <div class="box">
+                    <h3>👤 Nama Lengkap</h3>
+                    <p>Bintang Adi Heriyanto</p>
+                </div>
+
+                <div class="box">
+                    <h3>🎓 Kelas</h3>
+                    <p>XI TKJ 4</p>
+                </div>
+
+                <div class="box">
+                    <h3>💻 Jurusan</h3>
+                    <p>Teknik Komputer dan Jaringan</p>
+                </div>
+
+                <div class="box">
+                    <h3>📚 Status</h3>
+                    <p>Pelajar</p>
+                </div>
+
+                <div class="box">
+                    <h3>🌎 Tempat Tinggal</h3>
+                    <p>Jakarta</p>
+                </div>
+
+                <div class="box">
+                    <h3>💰 Tema Favorit</h3>
+                    <p>Dollar</p>
+                </div>
+
+            </div>
+
+            <!-- Tentang Saya -->
+            <div class="about">
+                <h2>Tentang Saya</h2>
+                <p>
+                    Halo, nama saya Bintang Adi Heriyanto.
+                    Saya adalah seorang pelajar kelas XI TKJ 4
+                    yang mempelajari berbagai hal tentang komputer
+                    dan jaringan. Saya tertarik dengan teknologi,
+                    komputer, networking, dan pengembangan website.
+                </p>
+            </div>
+
+            <!-- Keahlian -->
+            <div class="skills">
+                <h2>Keahlian</h2>
+
+                <div class="skill">
+                    <div class="skill-name">HTML</div>
+                    <div class="bar">
+                        <div class="fill" style="width: 85%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-name">CSS</div>
+                    <div class="bar">
+                        <div class="fill" style="width: 75%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-name">Networking</div>
+                    <div class="bar">
+                        <div class="fill" style="width: 80%;"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
     </div>
+
+    <footer>
+        © 2026 Bintang Adi Heriyanto | Biodata Website
+    </footer>
 
 </body>
 </html>
